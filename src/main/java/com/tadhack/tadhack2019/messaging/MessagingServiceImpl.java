@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-@Service
+@Service("MessagingServiceImpl")
 public class MessagingServiceImpl implements MessagingService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MessagingServiceImpl.class);
