@@ -27,7 +27,7 @@ public class MessagingServiceImpl implements MessagingService {
         refreshToken();
         final Message message = Message.builder().setNotification(new Notification(messageURL, messageURL)).setTopic(topic).build();
         final String response = FirebaseMessaging.getInstance().send(message);
-        LOGGER.info("Successfully sent message: ", response);
+        LOGGER.info("Successfully sent message: {}", response);
         return messageURL;
     }
 
