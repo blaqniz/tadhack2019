@@ -19,7 +19,7 @@ public class MessagingServiceImpl implements MessagingService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MessagingServiceImpl.class);
     private static final String TOPIC_STRING = "tadhack2019";
-    private static final String PATH = "src/main/java/com/tadhack/tadhack2019/firebaseConfig/tadhack2019-f9b26-firebase-adminsdk-g2jq2-50b39c2c3d.json";
+    private static final String PATH = "src/tadhack2019-e0e16-firebase-adminsdk-n4i43-d1828b889d.json";
 
     @Override
     public String sendMessage(final String messageURL) throws FirebaseMessagingException, IOException {
