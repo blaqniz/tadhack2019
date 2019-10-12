@@ -24,14 +24,14 @@ public class MessagingServiceImpl implements MessagingService {
     @Override
     public String sendMessage(final String messageURL) throws FirebaseMessagingException, IOException {
         final String topic = TOPIC_STRING;
-        refreshToken();
+        configureFirebaseOptions();
         final Message message = Message.builder().setNotification(new Notification(messageURL, messageURL)).setTopic(topic).build();
         final String response = FirebaseMessaging.getInstance().send(message);
         LOGGER.info("Successfully sent message: {}", response);
         return messageURL;
     }
 
-    private void refreshToken() throws IOException {
+    private void configureFirebaseOptions() throws IOException {
         final FileInputStream refreshToken = new FileInputStream(PATH);
         final FirebaseOptions options = new FirebaseOptions.Builder()
                 .setCredentials(GoogleCredentials.fromStream(refreshToken))
