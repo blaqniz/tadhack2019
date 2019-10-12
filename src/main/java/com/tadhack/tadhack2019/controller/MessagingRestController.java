@@ -20,10 +20,10 @@ public class MessagingRestController {
         this.messagingService = messagingService;
     }
 
-    @GetMapping("send/{urlString}")
-    public String sendMessage(@PathVariable final String urlString) throws FirebaseMessagingException, IOException {
-        LOGGER.info("Sending message to URL {}", urlString);
-        return messagingService.sendMessage(urlString);
+    @GetMapping("send/{liveStreamVideoUrl}")
+    public String sendMessage(@PathVariable final String liveStreamVideoUrl) throws FirebaseMessagingException, IOException {
+        LOGGER.info("Sending message to URL {}", liveStreamVideoUrl);
+        return messagingService.sendMessage(liveStreamVideoUrl);
     }
 
 }
