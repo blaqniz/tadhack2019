@@ -17,7 +17,7 @@ public class MessagingRestController {
 
     private MessagingService messagingService;
 
-    public MessagingRestController(@Qualifier("MessagingServiceImpl") MessagingService messagingService) {
+    public MessagingRestController(@Qualifier("MessagingServiceImpl") final MessagingService messagingService) {
         this.messagingService = messagingService;
     }
 
